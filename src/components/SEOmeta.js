@@ -1,5 +1,3 @@
-// SEO set up with Gatsby plugin react helmet: https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/?=gatsby%20plugin%20react%20hel
-
 import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
@@ -21,6 +19,8 @@ const SEO = ({ title, description, image }) => {
   const metaDescription = description || site.siteMetadata.siteDescription
   const siteTitle = site.siteMetadata.title
   const siteUrl = site.siteMetadata.siteUrl || ""
+
+  // If an image path is passed, ensure it's a full URL (using siteUrl if necessary)
   const imageUrl = image ? `${siteUrl}${image}` : null
 
   return (
