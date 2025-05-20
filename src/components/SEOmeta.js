@@ -25,27 +25,114 @@ const SEO = ({ title, description, image }) => {
   const imagePath = "/assets/images/About.png" // your relative path
   const fullImageUrl = `${siteUrl}${imagePath}` // becomes full URL
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Shaun D. Vine",
-    url: "https://shaunvine.com",
-    image: fullImageUrl, // replace with actual image path
-    jobTitle: "Manual QA Tester & Accessibility Consultant",
-    worksFor: {
-      "@type": "Organization",
-      name: "Shaun Vine",
+  const jsonLd = [
+    // LocalBusiness schema
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://shaunvine.com#business",
+      name: "Shaun D. Vine – Manual QA & Accessibility Services",
+      url: "https://shaunvine.com",
+      image: fullImageUrl,
+      description:
+        "Manual QA Testing, Accessibility Audits (WCAG), and CMS support for businesses, agencies, and developers in Seattle.",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Seattle",
+        addressRegion: "WA",
+        addressCountry: "US",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 47.6062,
+        longitude: -122.3321,
+      },
+      founder: {
+        "@id": "https://shaunvine.com#person",
+      },
+      sameAs: ["https://www.linkedin.com/in/shaunvine"],
     },
-    sameAs: ["https://www.linkedin.com/in/shaunvine"],
-    description:
-      "I offer Manual QA Testing, Accessibility Audits (WCAG), and CMS support for businesses, agencies, and developers.",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Seattle",
-      addressRegion: "WA",
-      addressCountry: "US",
+
+    // Person schema
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://shaunvine.com#person",
+      name: "Shaun D. Vine",
+      jobTitle: "Manual QA Tester & Accessibility Consultant",
+      url: "https://shaunvine.com",
+      worksFor: {
+        "@id": "https://shaunvine.com#business",
+      },
+      sameAs: ["https://www.linkedin.com/in/shaunvine"],
     },
-  }
+
+    // Service: Manual QA Testing
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "Manual QA Testing",
+      serviceType: "Website Quality Assurance",
+      provider: {
+        "@id": "https://shaunvine.com#business",
+      },
+      areaServed: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Seattle",
+          addressRegion: "WA",
+          addressCountry: "US",
+        },
+      },
+      description:
+        "Manual website testing for usability, broken links, responsive design, cross-browser and functional QA before launch.",
+    },
+
+    // Service: CMS Management
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "CMS Management",
+      serviceType: "Content Management Services",
+      provider: {
+        "@id": "https://shaunvine.com#business",
+      },
+      areaServed: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Seattle",
+          addressRegion: "WA",
+          addressCountry: "US",
+        },
+      },
+      description:
+        "Custom CMS updates, plugin maintenance, content entry, and layout QA for WordPress, Contentful, Optmizely, and other platforms.",
+    },
+
+    // Service: Accessibility Audits
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "Accessibility Audits",
+      serviceType: "Website Accessibility Evaluation",
+      provider: {
+        "@id": "https://shaunvine.com#business",
+      },
+      areaServed: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Seattle",
+          addressRegion: "WA",
+          addressCountry: "US",
+        },
+      },
+      description:
+        "Website audits for accessibility compliance with WCAG 2.1, including keyboard navigation, screen reader testing, and color contrast.",
+    },
+  ]
 
   return (
     <Helmet htmlAttributes={{ lang: "en" }} title={`${title} | ${siteTitle}`}>

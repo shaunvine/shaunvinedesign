@@ -14,8 +14,8 @@ const QaServices = ({
   return (
     <Layout>
       <SEOmeta
-        title="Manual QA Testing for Websites | Shaun Vine – Expert Website Quality Assurance"
-        description="Ensure your website is bug-free, user-friendly, and fully functional with expert Manual QA Testing. Shaun Vine provides detailed hands-on website testing tailored to improve usability and performance."
+        title="Seattle Manual QA Testing | Accessibility Audits | CMS Support"
+        description="Seattle-based Manual QA and Accessibility Testing expert ensuring bug-free, accessible websites for local Businesses and Agencies"
         image="/images/shaun-vine-portfolio.jpg"
       />
       <main className="page">
@@ -25,12 +25,32 @@ const QaServices = ({
               <h1>Flawless User Experiences, One Click at a Time</h1>
             </span>
             <span className="qa-intro">
-              In today’s digital world, every broken link or layout glitch can
-              cost you users. I offer comprehensive manual QA testing services
-              to make sure your site works exactly as intended—on major
-              browsers, the latest devices, every time. From detailed bug
-              reporting to accessibility audits, I ensure your site is
-              launch-ready and rock solid.
+              <uL>
+                <li>
+                  I have been based in Seattle, Washington since 1994. I offer
+                  specialized{" "}
+                  <strong> manual quality assurance testing </strong>
+                  and <strong> accessibility audits </strong>
+                  for Seattle Businesses, Digital Agencies, and Startups.
+                </li>
+
+                <li>
+                  My hands-on approach ensures your website is thoroughly tested
+                  across all major browsers and devices, delivering flawless
+                  user experiences for your local customers.
+                </li>
+
+                <li>
+                  Whether you are a Seattle business launching a new site or
+                  maintaining an existing one, I provide detailed bug reporting,
+                  compliance checks with WCAG standards, and usability testing.
+                </li>
+                <li>
+                  I am a local expert who understands Seattle’s market and can
+                  help your business stay ahead with high-quality, accessible,
+                  and user-friendly websites.
+                </li>
+              </uL>
             </span>
             <Link
               to="/service-request"
@@ -47,6 +67,18 @@ const QaServices = ({
               className="qa-img"
               placeholder="blurred"
             />
+          </article>
+        </section>
+        <section className="qa-blurb-section">
+          <article>
+            <span className="qa-blurb">
+              In today’s digital world, every broken link or layout glitch can
+              cost you users. I offer comprehensive manual QA testing services
+              to make sure your site works exactly as intended—on major
+              browsers, the latest devices, every time. From detailed bug
+              reporting to accessibility audits, I ensure your site is
+              launch-ready and rock solid.
+            </span>
           </article>
         </section>
         <section className="qa-services">

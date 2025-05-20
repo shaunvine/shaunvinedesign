@@ -1428,6 +1428,24 @@ body.visited .drop-bounce-text span {
   font-size: 1.25rem;
   color: #fff;
 }
+
+.qa-blurb-section {
+  /* background-color: #4f5f82; */
+  border-radius: 10% 10%;
+}
+.qa-blurb {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 50%;
+  margin: 2rem auto 2rem auto;
+  padding: 2rem 2rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 200;
+  background-color: #4f5f82;
+  border-radius: 10% 10%
+}
 .qa-img {
   border-radius: 10% 10%;
 }
@@ -1805,6 +1823,10 @@ li.list-custom-style {
 @media (max-width: 800px) {
   .projects-list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .qa-blurb {
+    max-width: 100%;
   }
 }
 
