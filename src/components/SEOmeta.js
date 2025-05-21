@@ -1,6 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { useLocation } from "@reach/router"
 
 const query = graphql`
   {
@@ -16,10 +17,13 @@ const query = graphql`
 
 const SEO = ({ title, description, image }) => {
   const { site } = useStaticQuery(query)
+  const location = useLocation()
+
   const metaDescription = description || site.siteMetadata.siteDescription
   const siteTitle = site.siteMetadata.title
   const siteUrl = site.siteMetadata.siteUrl || ""
 
+  const canonicalUrl = `${siteUrl}${location.pathname}`
   const imageUrl = image ? `${siteUrl}${image}` : null
 
   const imagePath = "/assets/images/About.png" // your relative path
@@ -138,12 +142,13 @@ const SEO = ({ title, description, image }) => {
     <Helmet htmlAttributes={{ lang: "en" }} title={`${title} | ${siteTitle}`}>
       <meta name="description" content={metaDescription} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="canonical" href={canonicalUrl} />
 
       {/* Open Graph */}
       <meta property="og:title" content={`${title} | ${siteTitle}`} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={siteUrl} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:locale" content="en_US" />
       {imageUrl && <meta property="og:image" content={imageUrl} />}
 

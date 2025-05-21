@@ -25,7 +25,7 @@ const QaServices = ({
               <h1>Flawless User Experiences, One Click at a Time</h1>
             </span>
             <span className="qa-intro">
-              <uL>
+              <ul>
                 <li>
                   I have been based in Seattle, Washington since 1994. I offer
                   specialized{" "}
@@ -50,7 +50,7 @@ const QaServices = ({
                   help your business stay ahead with high-quality, accessible,
                   and user-friendly websites.
                 </li>
-              </uL>
+              </ul>
             </span>
             <Link
               to="/service-request"
