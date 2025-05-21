@@ -8,7 +8,6 @@ require("dotenv").config({
 })
 ;(require("events").EventEmitter.defaultMaxListeners = 15),
   (module.exports = {
-    trailingSlash: "always", // force trailing slash on all URLs
     /* Your site config here */
     siteMetadata: {
       title: "Manual QA Tester | CMS Content Manager | Seattle | Shaun Vine",
