@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
-import { useLocation } from "@reach/router"
 import "normalize.css"
 import "../assets/css/main.css"
 
 const Layout = ({ children }) => {
-  const location = useLocation()
   const [isHydrated, setIsHydrated] = useState(false)
 
   // This ensures we're only running browser-side logic

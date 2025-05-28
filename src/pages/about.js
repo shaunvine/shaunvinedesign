@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
 import ClientFeedback from "../components/ClientFeedback"
 import OutdoorImages from "../components/OutdoorImages"
 import SEOmeta from "../components/SEOmeta"
