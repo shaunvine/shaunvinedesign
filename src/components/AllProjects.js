@@ -4,7 +4,7 @@ import ProjectList from "./ProjectsList"
 import { graphql, useStaticQuery } from "gatsby"
 const query = graphql`
   {
-    allContentfulPortfolio(sort: { fields: title, order: ASC }) {
+    allContentfulPortfolio(sort: { title: ASC }) {
       nodes {
         id
         title

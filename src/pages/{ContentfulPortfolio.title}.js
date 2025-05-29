@@ -8,13 +8,13 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { FaArrowRight } from "react-icons/fa"
 import { extractTextFromRaw } from "../utils/extractTextFromRaw"
 
-
 const ProjectTemplate = ({ data }) => {
   const {
     title,
     description,
     tools: { tools },
     image,
+    imageAltText,
     portfolioCards, // Added portfolioCards
   } = data.contentfulPortfolio
   const pathToImage = getImage(image)
@@ -47,7 +47,7 @@ const ProjectTemplate = ({ data }) => {
             <span className="frame">
               <GatsbyImage
                 image={pathToImage}
-                alt={image?.description ? image.description : title}
+                alt={imageAltText || image?.description || title}
                 className="about-img"
               />
             </span>
@@ -81,9 +81,9 @@ const ProjectTemplate = ({ data }) => {
                       <GatsbyImage
                         image={getImage(card.card.gatsbyImageData)}
                         alt={
-                          card.card?.description
-                            ? card.card.description
-                            : `Card image ${index + 1}`
+                          card.interImageAltText || // ✅ use your custom alt text field
+                          card.card?.description || // fallback to image's description
+                          `Card image ${index + 1}` // final fallback
                         }
                         className="card-image"
                       />
@@ -138,12 +138,15 @@ export const query = graphql`
         description # Added this field for alt text
         title # Added this to get the actual image title
       }
+      imageAltText
 
       portfolioCards {
         iterations
+        interImageAltText
         cardDescription {
           raw
         }
+
         card {
           gatsbyImageData(layout: CONSTRAINED, placeholder: DOMINANT_COLOR)
           title
