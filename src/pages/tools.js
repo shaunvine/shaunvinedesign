@@ -1,9 +1,9 @@
 import React from "react"
+import SEOmeta from "../components/SEOmeta"
 import Layout from "../components/Layout"
 import { graphql, Link } from "gatsby"
 import setupTools from "../utils/setupTools"
 import slugify from "slugify"
-import SEOmeta from "../components/SEOmeta"
 
 
 const pluralize = (value, word) =>

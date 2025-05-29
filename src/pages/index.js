@@ -1,10 +1,10 @@
 import React from "react"
+import SEOmeta from "../components/SEOmeta"
 import Layout from "../components/Layout"
 import Services from "../components/Services"
 import Skills from "../components/Skills"
 import AllProjects from "../components/AllProjects"
 import ClientFeedback from "../components/ClientFeedback"
-import SEOmeta from "../components/SEOmeta"
 
 const IndexPage = () => {
   return (

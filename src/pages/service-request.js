@@ -1,9 +1,9 @@
 import React, { useState } from "react"
+import SEOmeta from "../components/SEOmeta"
 import { graphql } from "gatsby"
 import { navigate } from "gatsby"
 import Layout from "../components/Layout"
 import ProjectsList from "../components/ProjectsList"
-import SEOmeta from "../components/SEOmeta"
 
 const ServicerequestForm = ({ data }) => {
   const projects = data.allContentfulPortfolio.nodes

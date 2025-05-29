@@ -1,7 +1,7 @@
 import React from "react"
+import SEOmeta from "../components/SEOmeta"
 import Layout from "../components/Layout"
 import AllProjects from "../components/AllProjects"
-import SEOmeta from "../components/SEOmeta"
 
 const Projects = () => {
   return (

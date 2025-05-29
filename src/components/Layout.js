@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 import "normalize.css"
 import "../assets/css/main.css"
 
 const Layout = ({ children }) => {
-  const [isHydrated, setIsHydrated] = useState(false)
-
-  // This ensures we're only running browser-side logic
   useEffect(() => {
+    // This ensures we're only running browser-side logic
     if (typeof window !== "undefined") {
       const hasVisited = localStorage.getItem("hasVisitedBefore")
       const body = document.body
@@ -22,16 +20,13 @@ const Layout = ({ children }) => {
       } else {
         body.classList.add("visited")
       }
-
-      // Ensure hydration is complete
-      setIsHydrated(true)
     }
   }, [])
 
   return (
     <>
       <Navbar />
-      {isHydrated && children}
+      {children} {/* Render children immediately for proper SSR and SEO */}
       <Footer />
     </>
   )

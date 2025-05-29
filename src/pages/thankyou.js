@@ -1,7 +1,7 @@
 import React from "react"
+import SEOmeta from "../components/SEOmeta"
 import Layout from "../components/Layout"
 import OutdoorImages from "../components/OutdoorImages"
-import SEOmeta from "../components/SEOmeta"
 
 const ThankYouPage = () => {
   return (

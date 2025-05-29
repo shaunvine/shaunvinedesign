@@ -1,8 +1,8 @@
 import React from "react"
+import SEOmeta from "../components/SEOmeta"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
-import SEOmeta from "../components/SEOmeta"
 import { FaCheck } from "react-icons/fa"
 import { Link } from "gatsby"
 

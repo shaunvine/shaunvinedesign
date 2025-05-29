@@ -1,6 +1,6 @@
 import React from "react"
-import Layout from "../components/Layout"
 import SEOmeta from "../components/SEOmeta"
+import Layout from "../components/Layout"
 
 const Error = () => {
   return (
