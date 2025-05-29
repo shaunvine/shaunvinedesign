@@ -11,8 +11,10 @@ const Services = () => {
           <div className="service-content">
             <h2 className="service-title">QA Services</h2>
             <div className="service-list-intro">
-              <h3>Ensure your digital experience is flawless across major browsers
-              and devices.</h3>
+              <h3>
+                Ensure your digital experience is flawless across major browsers
+                and devices.
+              </h3>
             </div>
             <div className="service-list-container">
               <div className="service-includes">Services Included:</div>
@@ -73,8 +75,10 @@ const Services = () => {
           <div className="service-content">
             <h2 className="service-title">CMS Services</h2>
             <div className="service-list-intro">
-              <h3>Professional content management for a smooth, reliable publishing
-              process.</h3>
+              <h3>
+                Professional content management for a smooth, reliable
+                publishing process.
+              </h3>
             </div>
             <div className="service-list-container">
               <div className="service-includes">Services Included:</div>
@@ -121,7 +125,7 @@ const Services = () => {
             </div>
           </div>
           <div className="button-group">
-            <Link to="/qa-services" className="request-quote-btn">
+            <Link to="/cms-services" className="request-quote-btn">
               More Details
             </Link>
             <Link to="/service-request" className="request-quote-btn">
