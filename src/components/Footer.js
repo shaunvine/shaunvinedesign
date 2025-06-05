@@ -7,7 +7,7 @@ const Footer = () => {
       <p>
         &copy; {new Date().getFullYear()} shaunvine.com - Built with
         <a
-          aria-label="Contentful"
+          aria-label="Contentful Website | Opens in new tab"
           className="gatsby"
           href="https://www.contentful.com/"
           target="_blank"
@@ -17,7 +17,7 @@ const Footer = () => {
         </a>
         and
         <a
-          aria-label="React"
+          aria-label="React Website | Opens in new tab"
           className="react"
           href="https://react.dev/"
           target="_blank"

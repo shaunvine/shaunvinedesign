@@ -138,7 +138,6 @@ b {
 
 a {
   text-decoration: none;
-  color: #fff;
 }
 
 .project-info a {
@@ -936,17 +935,12 @@ blockquote span.callout {
   text-align: center;
 }
 
-/* span:hover {
-  color: #fff;
-} */
-
-span {
-  color: #fff;
-}
-
-.project-title {
+span.project-title {
   font-size: 1rem;
+  line-height: 2;
   text-align: center;
+  color: #000;
+  padding-top: .25rem;
 }
 
 .project p {
