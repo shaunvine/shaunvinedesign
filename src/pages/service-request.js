@@ -175,19 +175,35 @@ const ServicerequestForm = ({ data }) => {
               </div>
               <div className="form-row">
                 <label htmlFor="start-date">
-                  Ideal Start Date (Use the date picker)
+                  Ideal Start Date (MM/DD/YYYY)
                 </label>
                 <input
-                  type="date"
-                  name="startDate"
+                  type="text"
                   id="start-date"
-                  aria-label="Your Ideal Start Date"
-                  placeholder="Your Ideal Start Date"
+                  name="startDate"
+                  inputMode="numeric"
+                  placeholder="MM/DD/YYYY"
+                  aria-label="Your Ideal Start Date (MM/DD/YYYY)"
                   value={formData.startDate}
-                  onChange={handleChange}
-                  min={new Date().toISOString().split("T")[0]}
+                  onChange={e => {
+                    // allow only digits and auto-insert slashes
+                    let v = e.target.value.replace(/[^\d]/g, "")
+                    if (v.length > 8) v = v.slice(0, 8)
+                    if (v.length > 2) v = v.slice(0, 2) + "/" + v.slice(2)
+                    if (v.length > 4) v = v.slice(0, 5) + "/" + v.slice(5)
+                    setFormData({ ...formData, startDate: v })
+                  }}
+                  onBlur={e => {
+                    // optional: basic validation for format MM/DD/YYYY
+                    const value = e.target.value
+                    const regex = /^(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])\/\d{4}$/
+                    if (value && !regex.test(value)) {
+                      alert("Please enter a valid date in MM/DD/YYYY format.")
+                    }
+                  }}
                 />
               </div>
+
               <div className="form-row">
                 <label htmlFor="budget">budget range Type</label>
                 <select
