@@ -190,7 +190,7 @@ const ServicerequestForm = ({ data }) => {
                 />
               </div>
               <div className="form-row">
-                <label htmlFor="budget">budge range Type</label>
+                <label htmlFor="budget">budget range Type</label>
                 <select
                   name="budget"
                   id="budget"
