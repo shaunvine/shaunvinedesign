@@ -5,7 +5,7 @@ const ClientFeedback = () => {
     <div className="feedback-hero">
       <div className="feedback-heading">
         
-          <h2>Client feedback</h2>
+          <h2 id="feedback-heading" >Client feedback</h2>
        
       </div>
       <div className="testimonials-container">

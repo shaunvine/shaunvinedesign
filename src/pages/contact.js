@@ -56,7 +56,7 @@ const ContactForm = ({ data }) => {
             <p>Thanks, Shaun</p>
           </article>
           <article>
-            <form className="form contact-form" onSubmit={handleSubmit}>
+            <form className="form a11y-form contact-form" onSubmit={handleSubmit}>
               <div className="form-row">
                 <label htmlFor="name">
                   your name<sup>*</sup>

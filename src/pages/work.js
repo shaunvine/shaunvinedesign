@@ -7,13 +7,14 @@ const Work = () => {
   return (
     <Layout>
       <SEOmeta
-        title="Home"
+        title="Work and Projects"
         description="Explore a collection of professional logo designs and responsive websites crafted for diverse brands. From visual identity to full web presence, see how design and function come together."
         image="/images/shaun-vine-portfolio.jpg"
       />
-      <main className="page">
+      <div className="page">
+        <h1 className="sr-only">Work</h1>
         <AllProjects />
-      </main>
+      </div>
     </Layout>
   )
 }

@@ -9,7 +9,9 @@ const Services = () => {
         {/* QA Services */}
         <div className="service-column">
           <div className="service-content">
-            <h2 className="service-title">QA Services</h2>
+            <h2 id="services-heading" className="service-title">
+              QA Services
+            </h2>
             <div className="service-list-intro">
               <h3>
                 Ensure your digital experience is flawless across major browsers
@@ -62,7 +64,7 @@ const Services = () => {
           </div>
           <div className="button-group">
             <Link to="/manual-qa-services" className="request-quote-btn">
-              More Details
+              More about QA Services
             </Link>
             <Link to="/service-request" className="request-quote-btn">
               Start Your Project
@@ -126,7 +128,7 @@ const Services = () => {
           </div>
           <div className="button-group">
             <Link to="/cms-services" className="request-quote-btn">
-              More Details
+              More About CMS Services
             </Link>
             <Link to="/service-request" className="request-quote-btn">
               Start Your Project

@@ -50,7 +50,7 @@ const Navbar = () => {
             to="/work"
             className="nav-link"
             activeClassName="active-link"
-            aria-label="See latest projects"
+            aria-label="Work"
             onClick={() => setShow(false)}
           >
             work

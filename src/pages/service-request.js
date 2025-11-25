@@ -70,7 +70,7 @@ const ServicerequestForm = ({ data }) => {
             <div>Shaun</div>
           </article>
           <article>
-            <form className="service-form contact-form" onSubmit={handleSubmit}>
+            <form className="a11y-form service-form contact-form" onSubmit={handleSubmit}>
               <div className="form-row">
                 <label htmlFor="name">
                   your name<sup aria-hidden="true">*</sup>

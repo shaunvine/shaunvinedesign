@@ -23,6 +23,9 @@ const SEO = ({ title, description, image }) => {
   const siteTitle = site.siteMetadata.title
   const siteUrl = site.siteMetadata.siteUrl || ""
 
+  // Build a single pageTitle value for everything
+  const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle
+
   const canonicalUrl = `${siteUrl}${location.pathname}`
   const imageUrl = image ? `${siteUrl}${image}` : null
 

@@ -40,6 +40,7 @@ export const onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
   setPreBodyComponents([
     <noscript
       key="gtm-noscript"
+      aria-hidden="true" // hides from assistive tech
       dangerouslySetInnerHTML={{
         __html: `
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMVV55D"

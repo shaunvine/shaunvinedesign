@@ -23,7 +23,7 @@ const AllProjects = () => {
   const data = useStaticQuery(query)
   const projects = data.allContentfulPortfolio.nodes
   return (
-    <section className="portfolio-container">
+    <section id="projects-heading" className="portfolio-container">
       <ToolsList projects={projects} />
       <ProjectList projects={projects} />
     </section>
