@@ -31,7 +31,7 @@ const QaServices = ({
                   specialized{" "}
                   <strong> manual quality assurance testing </strong>
                   and <strong> accessibility audits </strong>
-                  for Seattle Businesses, Digital Agencies, and Startups.
+                  for Seattle Businesses and Digital Agencies.
                 </li>
 
                 <li>
