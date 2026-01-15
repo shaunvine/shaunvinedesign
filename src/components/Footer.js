@@ -31,6 +31,16 @@ const Footer = () => {
             <FaReact />
           </a>
         </p>
+        {/* Manage Cookies button */}
+        <div style={{ textAlign: "center", marginTop: "0.75rem" }}>
+          <button
+            type="button"
+            id="manage-cookies"
+            className="manage-cookies-btn"
+          >
+            Manage cookies
+          </button>
+        </div>
       </div>
     </footer>
   )
