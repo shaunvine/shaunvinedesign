@@ -31,7 +31,7 @@ export const onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
             j.async=true;
             j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
             f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-5ZZN2Q9R');
+          })(window,document,'script','dataLayer','GTM-5JMVV55D');
         `,
       }}
     />,
@@ -43,7 +43,7 @@ export const onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
       aria-hidden="true" // hides from assistive tech
       dangerouslySetInnerHTML={{
         __html: `
-          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZZN2Q9R"
+          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMVV55D"
           height="0" width="0" style="display:none;visibility:hidden"></iframe>
         `,
       }}
