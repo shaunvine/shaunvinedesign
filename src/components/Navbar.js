@@ -62,7 +62,7 @@ const Navbar = () => {
             aria-label="Find out more about QA services"
             onClick={() => setShow(false)}
           >
-            QA Services
+            QA
           </Link>
           <Link
             to="/cms-services"
@@ -71,7 +71,7 @@ const Navbar = () => {
             aria-label="Find out more about CMS services"
             onClick={() => setShow(false)}
           >
-            CMS Services
+            CMS
           </Link>
 
           <Link
