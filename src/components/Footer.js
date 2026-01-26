@@ -1,6 +1,6 @@
 import React from "react"
 import { FaReact } from "react-icons/fa"
-import logo from "../assets/images/IAAP-cert.png" // <-- Update this path
+import logo from "../assets/images/IAAP-Cert.png"
 
 const Footer = () => {
   return (
