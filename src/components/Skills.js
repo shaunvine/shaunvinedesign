@@ -15,7 +15,7 @@ const Skills = () => {
             <li>FIGMA</li>
             <li>Adobe Photoshop CC</li>
             <li>Adobe Illustrator CC</li>
-            <li>Adobe After Effects CC</li>
+            <li>Adobe Premiere Pro</li>
             <li>Adobe InDesign CC</li>
           </ul>
         </div>
