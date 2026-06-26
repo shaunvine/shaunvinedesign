@@ -1,53 +1,22 @@
-import React from "react"
-import SEOmeta from "../components/SEOmeta"
+// This page is no longer used — the tools field was removed from Contentful.
+// Kept as a stub to prevent Gatsby from 404ing during any lingering references.
+
+import React, { useEffect } from "react"
+import { navigate } from "gatsby"
 import Layout from "../components/Layout"
-import { graphql, Link } from "gatsby"
-import setupTools from "../utils/setupTools"
-import slugify from "slugify"
 
-
-const pluralize = (value, word) =>
-  value === 1 ? `${value} ${word}` : `${value} ${word}s`
-
-const Tools = ({ data }) => {
-  const newTools = setupTools(data.allContentfulPortfolio.nodes)
+const ToolsRedirect = () => {
+  useEffect(() => {
+    navigate("/work", { replace: true })
+  }, [])
 
   return (
     <Layout>
-      <SEOmeta
-        title="Tools used in Projects"
-        description="Explore the tools used in my projects. From web development to design, discover the technologies that power my work."
-        image="/images/shaun-vine-portfolio.jpg"
-      />
       <main className="page">
-        <section className="tools-page">
-          {newTools.map((tool, index) => {
-            const [text, value] = tool
-            const slug = slugify(text, { lower: true })
-
-            return (
-              <Link to={`/tools/${slug}`} key={index} className="tool">
-                <h5>{text}</h5>
-                <p>{pluralize(value, "project")}</p> {/* Pluralize 'project' */}
-              </Link>
-            )
-          })}
-        </section>
+        <p>Redirecting to <a href="/work">Work</a>…</p>
       </main>
     </Layout>
   )
 }
 
-export const query = graphql`
-  {
-    allContentfulPortfolio {
-      nodes {
-        tools {
-          tools
-        }
-      }
-    }
-  }
-`
-
-export default Tools
+export default ToolsRedirect
